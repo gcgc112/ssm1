@@ -22,6 +22,7 @@ public class GoodsController {
 
     @RequestMapping("findAll")
     public String findAll(Model model) {
+        
         System.out.println("请求过来了！");
         List<Student> list = studentService.queryAll();
         model.addAttribute("list",list);
@@ -51,5 +52,9 @@ public class GoodsController {
         return "";
     }
 
+    @RequestMapping("updateById")
+    public String updateById() {
+        return "aaa";
+    }
 
 }
